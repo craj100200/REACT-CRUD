@@ -18,7 +18,8 @@ const StudentList = () => {
 	//http://localhost:10000/students
 	const { data: studentList, isLoading, error } = useQuery({
 	queryFn: () =>
-	fetch('http://localhost:10000/students')
+	//fetch('http://localhost:10000/students')
+	fetch('https://15-apr-2025.vercel.app/students')
 		.then((res) =>  res.json())
 		.then((res)=>{console.log(res); setStudents(res); return res;  }),
     		queryKey: ['studentList'],
@@ -49,7 +50,8 @@ const StudentList = () => {
 		{
 			setFormMode("");
 			setStudents((prevStudents) => [...prevStudents, currentStudent]);
-			const response = fetch('http://localhost:10000/students/students/', 
+			//const response = fetch('http://localhost:10000/students/students/', 
+			const response = fecth('https://15-apr-2025.vercel.app/students/', 
 				{
     				method: 'POST', // or 'PATCH' depending on your API
     				headers: { 'Content-Type': 'application/json' },
@@ -64,7 +66,8 @@ const StudentList = () => {
 			student.id === currentStudent.id ? currentStudent : student
 			);
 			setStudents(newStudents);
-			const response = fetch('http://localhost:10000/students/students/'+ currentStudent.id, 
+			//const response = fetch('http://localhost:10000/students/students/'+ currentStudent.id, 
+			const response = fetch('https://15-apr-2025.vercel.app/students/'+ currentStudent.id, 
 				{
     				method: 'PUT', // or 'PATCH' depending on your API
     				headers: { 'Content-Type': 'application/json' },
