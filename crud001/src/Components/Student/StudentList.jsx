@@ -51,7 +51,7 @@ const StudentList = () => {
 			setFormMode("");
 			setStudents((prevStudents) => [...prevStudents, currentStudent]);
 			//const response = fetch('http://localhost:10000/students/students/', 
-			const response = fecth('https://15-apr-2025.vercel.app/students/', 
+			const response = fetch('https://15-apr-2025.vercel.app/students/', 
 				{
     				method: 'POST', // or 'PATCH' depending on your API
     				headers: { 'Content-Type': 'application/json' },
