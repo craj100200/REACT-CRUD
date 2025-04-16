@@ -75,11 +75,6 @@ const StudentList = () => {
 	  			}
 				);
 		}
-
-			indexOfLastStudent = currentPage * studentsPerPage;
-	indexOfFirstStudent = indexOfLastStudent - studentsPerPage;
-	currentStudents = students.slice(indexOfFirstStudent, indexOfLastStudent);
-	totalPages = Math.ceil(students.length / studentsPerPage);
 		
 	};
 
