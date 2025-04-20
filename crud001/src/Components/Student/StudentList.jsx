@@ -95,7 +95,8 @@ const StudentList = () => {
 			students.filter((student) => student.id !== studentToBeDeleted.id)
 		);
 
-		const response = fetch('http://localhost:10000/students/students/'+ studentToBeDeleted.id, {
+		//const response = fetch('http://localhost:10000/students/students/'+ studentToBeDeleted.id, {
+		const response = fetch('https://15-apr-2025.vercel.app/students/'+ studentToBeDeleted.id, {			
     			method: 'DELETE', // or 'PATCH' depending on your API
 			headers: {"Content-Type":"application/json"}
 		});
